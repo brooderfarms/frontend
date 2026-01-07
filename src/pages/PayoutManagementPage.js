@@ -45,7 +45,7 @@ const PayoutManagementPage = () => {
   // Refresh user once on mount (avoid causing a user-state loop)
   useEffect(() => {
     refreshUser();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, []);
 
   // When user's role or approval status changes, fetch payment data
@@ -55,7 +55,7 @@ const PayoutManagementPage = () => {
       fetchPayoutHistory();
     }
     // Only depend on role and approval_status to avoid unnecessary loops
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, [user?.role, user?.approval_status]);
 
   // Helper function to ensure numeric values
@@ -426,3 +426,4 @@ const PayoutManagementPage = () => {
 };
 
 export default PayoutManagementPage;
+
